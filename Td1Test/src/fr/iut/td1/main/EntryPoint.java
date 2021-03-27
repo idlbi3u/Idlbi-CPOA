@@ -14,7 +14,7 @@ public class EntryPoint {
 		// Cr�ation du bilan :
 		Bilan bilan = new Bilan();
 		bilan.setNum(1);
-		System.out.println("-----------------------------");
+		System.out.println("SALUT C'EST ABDOUL");
 		// Cr�ation du graphe :
 		IObserver graphe = new UIWindowsGraphe(1);
 		IObserver graphe2 = new UIPhoneGraphe(2);

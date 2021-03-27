@@ -10,7 +10,7 @@ public class EntryPoint {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("HELLO WORLD ABDOUL COMMENT QU'C'EST");
-		System.out.println("-----------------------------");
+		System.out.println("***********************************");
 		// Cr�ation du bilan :
 		Bilan bilan = new Bilan();
 		bilan.setNum(1);

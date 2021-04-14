@@ -23,13 +23,13 @@ public class Maths implements IMaths {
 	}
 
 	@Override
-	public double division(int a, int b) throws MathsException {
+	public double division(double a, double b) throws MathsException {
 		if (b == 0) {
 			throw new MathsException("Division par zero impossible");
 		}
 		try {
 			return a/b;
-		}catch(Exception e ) {
+		}catch(Exception e) {
 			throw new MathsException(e.getMessage());
 			
 		}

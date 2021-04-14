@@ -1,8 +1,9 @@
 package tests.mathematique;
 
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 import exceptions.MathsException;
 import mathematique.Maths;
 import interfaces.IMaths;
@@ -40,13 +41,88 @@ public class MathsTest {
 	//-----------------
 	
 	@Test(expected = MathsException.class)
-	public void testDivisionParZero() {
+	public void testDivisionParZero() throws MathsException {
 		try {
 			maths.division(4, 0);
 		}catch(MathsException e) {
-			Assert.assertEquals(e.getMessage(), "Division par zero impossible!");
+			Assert.assertEquals(e.getMessage(), "Division par zero impossible");
 			throw e;
 		}
 	}
 	
-}
+	@Test
+	public void testDivisionParUnNegatif() throws MathsException{
+			Assert.assertEquals(maths.division(5, -2), -2.5, 0);
+		}
+	
+	@Test 
+	public void testDivisionParNombreTresGrand() throws MathsException{
+		Assert.assertEquals(maths.division(10, 100000000),0.0000001, 0);
+	}
+	@Test 
+	public void testDivisionParUnNombreReel() throws MathsException{
+		Assert.assertEquals(maths.division(10, 0.5),20, 0);
+	}
+	
+	//-----------------
+	// TESTS SOUSTRACTION
+	//-----------------
+	
+	@Test 
+	public void testSoustractionCasGeneral() {
+		Assert.assertEquals(maths.soustraction(5, 2), 3);
+	}
+	
+	@Test
+	public void testSoustractionParUnNegatif() {
+		Assert.assertEquals(maths.soustraction(5, -2), 7);
+	}
+	
+	@Test
+	public void testSoustractionParUnNombrePlusGrand() {
+		Assert.assertEquals(maths.soustraction(5, 10), -5);
+	}
+	
+	@Test
+	public void testSoustractionParZero() {
+		Assert.assertEquals(maths.soustraction(5, 0), 5);
+	}
+	@Test 
+	public void testSoustractionDeZeroParZero() {
+		Assert.assertEquals(maths.soustraction(0, 0), 0);
+	}
+	
+	//-----------------
+	// TESTS MULTIPLICATION
+	//-----------------
+	@Test
+	public void testMultiplicationCasGeneral() {
+		Assert.assertEquals(maths.multiplication(2, 5), 10);
+	}
+	
+	@Test
+	public void testMultiplicationParUnNegatif() {
+		Assert.assertEquals(maths.multiplication(2,-5), -10);
+	}
+	
+	@Test
+	public void testMultiplicationEntreDeuxNombreNegatif() {
+		Assert.assertEquals(maths.multiplication(-2, -5), 10);
+	}
+	
+	@Test
+	public void testMultiplicationParZero() {
+		Assert.assertEquals(maths.multiplication(2, 0), 0);
+	}
+	
+	@Test
+	public void testMultiplicationZeroParZero() {
+		Assert.assertEquals(maths.multiplication(0, 0), 0);
+	}
+	
+	
+	//----------------------------------------
+	// TEST MULTIPLICATION (METHODE ADDITION)
+	//----------------------------------------
+	
+}	

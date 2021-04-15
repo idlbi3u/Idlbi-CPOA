@@ -1,6 +1,5 @@
 package tests.mathematique;
 
-import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Assert;
 import org.junit.Test;

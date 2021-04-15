@@ -1,7 +1,5 @@
 package mathematique;
 
-import java.util.Iterator;
-
 import exceptions.MathsException;
 import interfaces.IMaths;
 

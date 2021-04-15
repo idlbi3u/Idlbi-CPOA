@@ -1,5 +1,7 @@
 package mathematique;
 
+import java.util.Iterator;
+
 import exceptions.MathsException;
 import interfaces.IMaths;
 
@@ -33,6 +35,22 @@ public class Maths implements IMaths {
 			throw new MathsException(e.getMessage());
 			
 		}
+	}
+	@Override
+	public int multiplicationParAddition(int a, int b) {
+		int reponse = 0;
+		int facteur = b;
+		if(b<0) {
+			facteur =facteur*-1;
+		}
+		for (int i = 0; i < facteur; i++) {
+			if(b>0) {
+				reponse= reponse +a;
+			}else {
+				reponse= reponse -a;
+			}
+		}
+		return reponse;
 	}
 
 }

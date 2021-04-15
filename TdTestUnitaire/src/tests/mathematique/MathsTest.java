@@ -125,4 +125,27 @@ public class MathsTest {
 	// TEST MULTIPLICATION (METHODE ADDITION)
 	//----------------------------------------
 	
+	@Test
+	public void testMultiplicationCasGeneralAddition() {
+		Assert.assertEquals(maths.multiplicationParAddition(2, 3), 6);
+	}
+	
+	@Test
+	public void testMultiplicationParUnNegatifAddition() {
+		Assert.assertEquals(maths.multiplicationParAddition(2, -3), -6);
+	}
+	@Test 
+	public void testMultiplicationParDeuxNombreNegatif() {
+		Assert.assertEquals(maths.multiplicationParAddition(-2, -3),6);
+	}
+	
+	@Test
+	public void testMultiplicationParZeroAddition() {
+		Assert.assertEquals(maths.multiplicationParAddition(2, 0), 0);
+	}
+	
+	@Test
+	public void testMultiplicationZeroParZeroAddition() {
+		Assert.assertEquals(maths.multiplicationParAddition(0, 0), 0);
+	}
 }	

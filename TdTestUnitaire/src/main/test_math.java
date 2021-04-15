@@ -9,7 +9,7 @@ public class test_math {
 	public static void main(String[] args) throws MathsException {
 		IMaths maths = new Maths();
 		IMaths maths1 = new Maths();
-		System.out.println("Addition : 2 + 3 = "+maths.addition(2, 3));
+		System.out.println("Multiplication : 4 × 5 = "+maths.multiplicationParAddition(4, 5));
 	}
 
 }

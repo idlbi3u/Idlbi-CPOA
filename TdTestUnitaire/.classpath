@@ -7,5 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/alome/Downloads/apache-maven-3.8.1-bin/apache-maven-3.8.1/bin"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
